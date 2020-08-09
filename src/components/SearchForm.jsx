@@ -20,7 +20,7 @@ export class SearchForm extends Component {
             .then(res => res.json())
             .then(results => {
                const { Search = [], totalResults = "0" } = results
-               //console.log({ Search, totalResults })
+               console.log({ Search, totalResults })
                this.props.onResults(Search)
             })
     }
@@ -32,12 +32,12 @@ export class SearchForm extends Component {
                     <div className="control">
                         <input className="input" 
                         type="text" 
-                        placeholder="Movie title"
+                        placeholder="Movie Title"
                         onChange={this._handleChange}/>
                     </div>
                     <div className="control">
                         <button className="button is-info">
-                            Search movie
+                            Search Movie
                         </button>
                     </div>
                 </div> 
